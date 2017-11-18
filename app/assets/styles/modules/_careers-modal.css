@@ -1,0 +1,127 @@
+.careers-modal{
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+
+
+  &__overlay{
+    position:relative;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  &__inner{
+
+    position: absolute;
+    background: red;
+    min-height: 400px;
+    max-height: 90vh;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #fff;
+    padding:25px;
+    @mixin atSmall{
+      width: 500px;
+    }
+    @mixin atMedium{
+      width: 750px;
+      padding:75px;
+
+    }
+
+  }
+
+  & h2{
+    font-size: 1.75em;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    max-width: 300px;
+    @mixin atSmall{
+      font-size: 2em;
+    }
+  }
+
+  & p, li{
+    font-family: "Open Sans";
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+
+  &__close{
+    position: absolute;
+    right: 5px;
+    top: 21px;
+    cursor: pointer;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+    @mixin atSmall{
+      right: 20px;
+      top: 20px;
+    }
+    @mixin atMedium{
+      right: 75px;
+      top: 75px;
+    }
+  }
+
+  &__close::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    margin-top: -1.5px;
+    transform: rotate(45deg);
+  }
+
+  &__close::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    margin-top: -1.5px;
+    transform: rotate(-45deg);
+
+
+  }
+
+& .btn{
+  border: 1px solid #fff;
+  margin-top: 25px;
+  &:hover{
+    background:#fff;
+    color: red;
+  }
+}
+
+
+
+}
+.careers-modal--is-visible{
+  display: block;
+}

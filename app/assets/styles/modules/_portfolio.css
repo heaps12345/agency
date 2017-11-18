@@ -1,0 +1,35 @@
+.portfolio{
+  padding: 100px 0;
+  & .col4{
+    position: relative;
+  }
+
+  & img{
+    height: 350px;
+    width: 350px;
+  }
+
+& h3{
+  padding-left: 10px;
+  padding-bottom: 7px;
+  font-weight: 300;
+}
+  &__info{
+    background:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0.8) 100%);
+    width: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: #fff;
+    position: absolute;
+    font-weight: 100;
+    bottom:0%;
+    left:0%;
+    margin-bottom: 4px;
+    @mixin atSmall{
+      width: 59.5%;
+    }
+  }
+
+
+}

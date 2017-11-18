@@ -1,0 +1,64 @@
+.contact-form{
+  background: linear-gradient(to bottom, #1f1f1f 0%, #dbdbdb 100%);
+  padding-top: 200px;
+  color: #fff;
+  text-align: center;
+
+
+
+  & h2{
+    font-size: 1.75rem;
+    font-weight: 200;
+    margin: 25px 0;
+    text-transform: uppercase;
+    text-align: center;
+    @mixin atSmall{
+      font-size: 3.5rem;
+    }
+  }
+
+  & input[type="text"], input[type="email"]{
+    width: 90%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    padding:10px 0;
+    margin-bottom: 50px;
+
+  }
+
+
+  & input::placeholder{
+    color: #FFF;
+    text-align: center;
+    font-size: .75rem;
+    @mixin atSmall{
+      font-size: 1rem;
+    }
+  }
+
+  & input[type="submit"]{
+    float: left;
+    color: #000;
+    margin-left:10px;
+    display: block;
+    width: 90%;
+    &:hover{
+      color: #fff;
+    }
+    @mixin atSmall{
+      margin-left: 15px;
+    }
+    @mixin atMedium{
+      margin-left: 12px;
+      display: inline;
+      width: auto;
+    }
+    @mixin atLarge{
+      margin-left: 17px;
+    }
+  }
+
+}

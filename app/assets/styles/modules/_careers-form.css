@@ -1,0 +1,104 @@
+.careers-form{
+    margin-top: 175px;
+    padding-top: 100px;
+    background:#dbdbdb;
+    color: #000;
+    text-align: center;
+
+
+    & h2{
+      font-size: 2rem;
+      font-weight: 200;
+      margin: 25px 0;
+      text-transform: uppercase;
+      text-align: center;
+
+    @mixin atSmall{
+      font-size: 2.5rem;
+    }
+  }
+
+    & li{
+      margin-top: 15px;
+      font-weight: 100;
+      list-style: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 5px;
+      &:hover{
+        background:red;
+        color: #fff;
+      }
+    }
+
+    & a:hover{
+      background: red;
+    }
+
+    /*& li .active{
+      background:red;
+      color: #fff;
+    }*/
+
+    & input[type="text"], input[type="email"], textarea{
+      width: 90%;
+      background: transparent;
+      border: none;
+      color: #000;
+      border-bottom: 1px solid #000;
+      text-align: left;
+      padding:10px 0;
+      margin-bottom: 50px;
+
+    }
+
+
+
+    & input::placeholder{
+      color: #000;
+      text-align: center;
+    }
+
+    & input[type="submit"]{
+      float: left;
+      color: #000;
+      margin-left:10px;
+      display: block;
+      width: 90%;
+      &:hover{
+        color: #fff;
+      }
+      @mixin atSmall{
+        margin-left: 15px;
+      }
+      @mixin atMedium{
+        margin-left: 12px;
+        display: inline;
+        width: auto;
+      }
+      @mixin atLarge{
+        margin-left: 17px;
+      }
+    }
+
+    & textarea{
+      min-height: 200px;
+      border: 1px solid #000;
+      width: 95%;
+      padding:10px;
+      color: #000;
+    }
+
+    & .btn{
+      background: red;
+      cursor: pointer;
+      color: #fff !important;
+
+    }
+
+  }
+
+  .active{
+    background:red;
+    color: #fff;
+  }

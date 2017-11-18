@@ -1,0 +1,68 @@
+.large-hero{
+  position: relative;
+  background: url("/assets/images/large-hero.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  @mixin atSmall{
+    height: 100vh;
+  }
+
+  & h1{
+      font-weight: 100;
+      text-transform: uppercase;
+
+  }
+
+  & span{
+
+    text-decoration-color: red;
+    text-decoration-line: underline;
+  }
+
+
+
+  &__text{
+    color: #fff;
+    position: absolute;
+    top: 90%;
+    left: 13%;
+    transform: translate(-13%, -90%);
+    font-size: .8rem;
+    margin-left:5px;
+    text-align: center;
+    @mixin atSmall{
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+  }
+
+  &__text--centered{
+    font-size: 1rem;
+    margin-left: 5px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:80%;
+    transform: translate(-50%, -50%);
+    @mixin atSmall{
+      width:auto;
+      font-size: 1rem;
+    }
+    @mixin atMedium{
+        font-size: 1.5rem;
+    }
+
+    @mixin atLarge{
+
+      top: 90%;
+      left: 13%;
+      transform: translate(-13%, -90%);
+    }
+
+
+
+  }
+}

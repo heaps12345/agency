@@ -1,0 +1,15 @@
+.main-banner{
+  background: #e4e4e4;
+
+  & img{
+  max-height: 50px;
+  opacity: .6;
+  transition:.5s;
+  margin: 20px 0;
+
+
+    &:hover{
+      opacity:1;
+    }
+  }
+}

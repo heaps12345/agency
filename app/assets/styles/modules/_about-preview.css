@@ -1,0 +1,33 @@
+.about-preview{
+  background: url("/assets/images/agency1.jpg");
+  height: 700px;
+  background-size: cover;
+  position: relative;
+
+
+  &__content{
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 47.5%;
+    /*left: 100%;*/
+    transform: translate(0, -50%);
+
+
+    @mixin atMedium{
+      transform: translate(-50%, -50%);
+      width: 45%;
+      text-align:center;
+    }
+    @mixin atLarge{
+      transform: translate(0, -25%);
+    }
+  }
+
+  & p:first-child{
+    font-weight: 100;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+  }
+}
