@@ -10370,6 +10370,7 @@ var Menu = function () {
 
     this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
     this.menuModal = (0, _jquery2.default)(".site-header__menu-modal");
+    this.logo = (0, _jquery2.default)(".site-header__logo");
     this.links = (0, _jquery2.default)(".site-header__menu-modal ul li");
     this.events();
   }
@@ -10384,6 +10385,7 @@ var Menu = function () {
     value: function toggleTheMenu() {
       this.menuModal.toggleClass("site-header__menu-modal--is-visible");
       this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+      this.logo.toggleClass("fixed");
       this.links.toggleClass("slide");
     }
   }]);

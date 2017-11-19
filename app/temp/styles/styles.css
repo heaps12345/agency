@@ -594,7 +594,7 @@ img {
        }
 }
 
-.site-header img{
+.site-header__logo{
     position: absolute;
     top: 20px;
     left: 5%;
@@ -606,7 +606,7 @@ img {
 
 @media (min-width: 768px) {
 
-.site-header img{
+.site-header__logo{
       width: 10%;
       top: 15px;
       left: 4%
@@ -617,7 +617,7 @@ img {
 
 @media (min-width: 992px) {
 
-.site-header img{
+.site-header__logo{
       left: 3%;
       top: 10px
 
@@ -694,6 +694,10 @@ img {
       transition: transform .3s ease-out, -webkit-transform .3s ease-out;
       }
 
+.site-header__menu-icon--close-x {
+        position:fixed;
+      }
+
 .site-header__menu-icon--close-x::before {
           -webkit-transform: rotate(45deg) scaleX(1.25) translateY(-9px);
                   transform: rotate(45deg) scaleX(1.25) translateY(-9px);
@@ -710,23 +714,38 @@ img {
                   transform: rotate(-45deg) scaleX(1.25) translateY(10px);
           }
 
-.site-header__menu-modal{
-        background: url("../../../assets/images/modal-bg.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: none;
+.site-header__menu-modal-bg{
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
 
       }
 
+.site-header__menu-modal{
+
+          display: none;
+        }
+
 .site-header__nav{
-        position: absolute;
-        top: 50%;
+        position: fixed;
+        top: 60%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-
+        z-index: 10;
       }
+
+@media (min-width: 992px) {
+
+.site-header__nav{
+          top: 55%
+      }
+  }
 
 .site-header__menu-modal ul{
         text-align: center;
@@ -739,7 +758,6 @@ img {
           left:50px;
           -webkit-transition: all .5s;
           transition: all .5s;
-
           opacity: 0;
           }
 
@@ -755,6 +773,10 @@ img {
               border-bottom:1px solid red;
             }
 
+.fixed{
+  position: fixed;
+}
+
 .site-header__menu-modal--is-visible{
   display: block;
 
@@ -763,6 +785,7 @@ img {
 .site-header__menu-modal--is-visible li.slide{
       left: 0;
       opacity: 1;
+
     }
 
 .large-hero{
