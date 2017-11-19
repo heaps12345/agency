@@ -1,6 +1,6 @@
 .large-hero{
   position: relative;
-  background: url("/assets/images/large-hero.jpg");
+  background: url("../../assets/images/large-hero.jpg");
   height: 50vh;
   background-size: cover;
   background-position: center;

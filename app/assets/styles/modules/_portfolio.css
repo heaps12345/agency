@@ -6,7 +6,7 @@
 
   & img{
     height: 350px;
-    width: 350px;
+
   }
 
 & h3{
@@ -26,9 +26,7 @@
     bottom:0%;
     left:0%;
     margin-bottom: 4px;
-    @mixin atSmall{
-      width: 59.5%;
-    }
+  
   }
 
 

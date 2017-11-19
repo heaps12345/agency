@@ -87,7 +87,7 @@
       }
 
       &__menu-modal{
-        background: url("/assets/images/modal-bg.jpg");
+        background: url("../../../assets/images/modal-bg.jpg");
         background-size: cover;
         background-position: center;
         height: 100vh;

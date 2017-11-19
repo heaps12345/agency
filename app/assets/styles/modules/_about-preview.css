@@ -1,5 +1,5 @@
 .about-preview{
-  background: url("/assets/images/agency1.jpg");
+  background: url("../../assets/images/agency1.jpg");
   height: 700px;
   background-size: cover;
   position: relative;

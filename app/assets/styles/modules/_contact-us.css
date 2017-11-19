@@ -3,7 +3,7 @@
   background: #dbdbdb;
   text-align: center;
   @mixin atLarge{
-    background: url("/assets/images/contact.jpg");
+    background: url("../../assets/images/contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
