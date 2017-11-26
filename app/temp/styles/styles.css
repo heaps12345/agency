@@ -452,7 +452,7 @@ template {
 
 body {
   font-family: 'Montserrat', sans-serif;
-      background:#f5f5f5;
+  background:#f5f5f5;
   color: #333;
 }
 
@@ -517,7 +517,7 @@ img {
 }
 
 .col2{
-  grid-column: span 4;
+  grid-column: span 2;
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
@@ -809,15 +809,6 @@ img {
 
   }
 
-.large-hero span{
-
-    -webkit-text-decoration-color: red;
-
-            text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-  }
-
 .large-hero__text{
     color: #fff;
     position: absolute;
@@ -835,8 +826,16 @@ img {
 @media (min-width: 480px) {
 
 .large-hero__text{
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: left
+
+  }
+  }
+
+@media (min-width: 768px) {
+
+.large-hero__text{
+      font-size: 1.5rem
 
   }
   }
@@ -892,6 +891,32 @@ img {
   }
   }
 
+.large-hero .underline{
+    position:relative;
+  }
+
+.large-hero .underline:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #e50c19;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+
+
+  }
+
+@media (min-width: 768px) {
+
+.large-hero .underline:after{
+      bottom: 5px;
+      height: 2px
+
+
+  }
+  }
+
 .btn{
   text-decoration: none;
   color: #fff;
@@ -922,7 +947,14 @@ img {
   opacity: .6;
   -webkit-transition:.5s;
   transition:.5s;
-  margin: 20px 0;
+    margin:5px 0;
+  }
+
+@media (min-width: 768px) {
+
+.main-banner img{
+  margin:20px 0
+  }
   }
 
 .main-banner img:hover{
@@ -933,8 +965,6 @@ img {
 
   padding-bottom: 100px;
   text-align: center;
-
-
 }
 
 .featured-work h2{
@@ -972,18 +1002,38 @@ img {
   }
   }
 
-.featured-work span{
-    text-decoration: underline;
-    -webkit-text-decoration-color: red;
-            text-decoration-color: red;
-  }
-
 .featured-work__btn{
     width:250px;
     text-align: center;
     color: #000;
 
       }
+
+.featured-work .underline{
+        position:relative;
+      }
+
+.featured-work .underline:after{
+        content: '';
+        width: 100%;
+        height: 0px;
+        background: #e50c19;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+
+
+      }
+
+@media (min-width: 768px) {
+
+.featured-work .underline:after{
+
+          height: 2px
+
+
+      }
+  }
 
 .about-us{
   margin: 100px 0;

@@ -14,11 +14,6 @@
 
   }
 
-  & span{
-
-    text-decoration-color: red;
-    text-decoration-line: underline;
-  }
 
 
 
@@ -32,8 +27,11 @@
     margin-left:5px;
     text-align: center;
     @mixin atSmall{
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: left;
+    }
+    @mixin atMedium{
+      font-size: 1.5rem;
     }
 
   }
@@ -62,6 +60,25 @@
       transform: translate(-13%, -90%);
     }
 
+
+
+  }
+ & .underline{
+    position:relative;
+  }
+
+    & .underline:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #e50c19;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    @mixin atMedium{
+      bottom: 5px;
+      height: 2px;
+    }
 
 
   }
